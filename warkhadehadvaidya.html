@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Warkhade Hadvaidya - Ajit Warkhade</title>
+
+<!-- UPDATED SEO META -->
+<meta name="description"
+content="Warkhade Hadvaidya Ayurveda clinic in Katraj Pune specializes in non-surgical Ayurvedic bone and joint treatment, joint pain relief, back pain care, knee pain therapy, sports injury healing, and spine therapies using traditional Hadvaidya practices.">
+
+<meta name="keywords"
+content="Ayurvedic bone and joint treatment Pune, Joint pain relief Ayurveda, Non surgical Ayurvedic therapy Pune, Hadvaidya in Katraj, Ayurvedic sports injury treatment, Back pain Ayurvedic clinic Pune, Knee pain therapy Ayurveda, Natural bone healing Ayurvedic methods">
+
+<meta name="author" content="Warkhade Hadvaidya">
+<meta name="geo.region" content="IN-MH">
+<meta name="geo.placename" content="Katraj, Pune">
+
+<style>
+body{
+    margin:0;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background-color:#f1f6f2;
+    color:#333;
+}
+
+/* HEADER */
+.top-header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    background-color:#1b5e20;
+    padding:14px 0;
+}
+.top-header img{ height:70px; }
+.top-header h1{
+    color:white;
+    margin:0;
+    font-weight:600;
+}
+
+/* NAVBAR */
+.navbar-wrap{
+    position:sticky;
+    top:0;
+    background-color:#1b5e20;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 20px;
+    z-index:100;
+    flex-wrap:wrap;
+}
+.navbar-wrap h2{
+    color:white;
+    font-size:18px;
+    margin:0;
+}
+.nav-items{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+.nav-items div{
+    cursor:pointer;
+    color:#dce9db;
+}
+.nav-items div:hover{
+    color:white;
+    border-bottom:2px solid white;
+}
+#langSelect{
+    padding:4px 8px;
+    border-radius:6px;
+    border:none;
+}
+
+/* SECTIONS */
+section{
+    max-width:1100px;
+    margin:50px auto;
+    padding:45px 25px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    text-align:center;
+}
+section h2{
+    color:#2e7d32;
+    margin-bottom:12px;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:22px;
+}
+.card{
+    width:260px;
+    background:#f9fcfa;
+    padding:18px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    font-weight:500;
+}
+
+/* CONTACT */
+.contact{
+    background:#eaf2ea;
+}
+.contact a{
+    display:inline-block;
+    margin:10px;
+    padding:10px 20px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* CONTACT POPUP */
+.contact-popup-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+.contact-popup{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    width:90%;
+    max-width:350px;
+}
+.close-btn{
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:6px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="top-header">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.W0K71b1hMDEUg9oUYkwH5wHaFF?pid=Api&P=0&h=180" alt="Warkhade Hadvaidya Logo">
+    <h1 id="headerTitle">Warkhade Hadvaidya – Ajit Warkhade</h1>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar-wrap">
+    <h2 id="navbarTitle">Hadvaidya Ajit Warkhade</h2>
+    <div class="nav-items">
+        <div onclick="scrollToId('home')" id="navHome">Home</div>
+        <div onclick="scrollToId('treatments')" id="navTreatments">Treatments</div>
+        <div onclick="scrollToId('approach')" id="navApproach">Approach</div>
+        <div onclick="scrollToId('about')" id="navAbout">About</div>
+        <div onclick="openContact()" id="navContact">Contact</div>
+        <select id="langSelect" onchange="changeLanguage()">
+            <option value="EN">EN</option>
+            <option value="HI">HI</option>
+            <option value="MR">MR</option>
+        </select>
+    </div>
+</div>
+
+<!-- HOME -->
+<section id="home">
+    <h2 id="homeTitle">Welcome to Warkhade Hadvaidya, Katraj</h2>
+    <p id="homeText">Traditional Ayurvedic bone and joint healing without surgery.</p>
+</section>
+
+<!-- TREATMENTS -->
+<section id="treatments">
+    <h2 id="treatmentsTitle">Our Treatments</h2>
+    <p style="color:#2e7d32; font-weight:500;" id="treatmentsSub">(Without Surgery / Without Any Operation)</p>
+
+    <div class="cards">
+        <div class="card" id="t1">Bone Fracture Treatment</div>
+        <div class="card" id="t2">Joint Pain Treatment</div>
+        <div class="card" id="t3">Swelling & Inflammation</div>
+        <div class="card" id="t4">Joint Dislocation</div>
+        <div class="card" id="t5">Frozen Shoulder</div>
+        <div class="card" id="t6">Knee Joint Treatment</div>
+        <div class="card" id="t7">Sciatica Pain</div>
+        <div class="card" id="t8">Back, Spine & Neck Pain</div>
+        <div class="card" id="t9">Muscle Pain</div>
+        <div class="card" id="t10">Sports Injury Treatment</div>
+        <div class="card" id="t11"><b>And More…</b></div>
+    </div>
+</section>
+
+<!-- AYURVEDIC APPROACH -->
+<section id="approach">
+    <h2 id="approachTitle">Our Ayurvedic Approach</h2>
+    <p id="approachText" style="max-width:900px; margin:0 auto 30px; line-height:1.6;">
+        Our treatment approach is based on traditional Ayurvedic Hadvaidya practices,
+        focusing on natural healing of bones, joints and muscles without surgery.
+        Each patient is examined carefully to provide personalized and safe treatment.
+    </p>
+
+    <div class="cards">
+        <div class="card" id="a1">Natural Bone Alignment Techniques</div>
+        <div class="card" id="a2">Traditional Ayurvedic Oils & Bandaging</div>
+        <div class="card" id="a3">Personalized Patient Examination</div>
+        <div class="card" id="a4">Non-Surgical & Safe Healing Methods</div>
+        <div class="card" id="a5">Focus on Long-Term Recovery</div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 id="aboutTitle">About Us</h2>
+    <p id="aboutText">
+        We are a traditional Ayurvedic Hadvaidya clinic based in Katraj, Pune,
+        providing trusted bone, joint, muscle and nerve treatments without surgery.
+        Our treatments focus on natural healing methods passed down through generations,
+        helping patients recover safely and effectively.
+        Trusted traditional Hadvaidya treatment with years of experience
+        in bone and joint healing without surgery with most affordable prices.
+    
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+    <h2 id="contactTitle">Contact & Location</h2>
+    <p style="color:#2e7d32; font-weight:500; margin-top:-5px; margin-bottom:25px;" id="contactText">
+        Contact us before visiting for appointment
+    </p>
+    <a href="https://maps.app.goo.gl/9qC2ijA3KYpvxS3a9" target="_blank" id="locLink">View Location</a>
+    <a href="https://wa.me/919637929702" target="_blank" id="waLink">WhatsApp</a>
+</section>
+
+<!-- CONTACT POPUP -->
+<div class="contact-popup-overlay" id="contactPopup">
+    <div class="contact-popup">
+        <button class="close-btn" onclick="closeContact()">Close</button>
+        <p><b>Ajit Warkhade</b><br>📞 9763252282</p>
+        <p><b>Aaditya Warkhade</b><br>📞 9637929702</p>
+    </div>
+</div>
+
+<footer>
+    © 2026 Warkhade Hadvaidya | Ayurvedic Healing
+</footer>
+
+<script>
+function scrollToId(id){
+    document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+function openContact(){
+    document.getElementById("contactPopup").style.display="flex";
+}
+function closeContact(){
+    document.getElementById("contactPopup").style.display="none";
+}
+
+// LANGUAGE CONTENT
+const translations = {
+    HI: {
+        headerTitle: "वरखडे हडवैद्य – अजित वरखडे",
+        navbarTitle: "हडवैद्य अजित वरखडे",
+        navHome: "होम",
+        navTreatments: "उपचार",
+        navApproach: "पद्धति",
+        navAbout: "हमारे बारे में",
+        navContact: "संपर्क करें",
+        homeTitle: "वरखडे हडवैद्य में आपका स्वागत है, कात्रज",
+        homeText: "सर्जरी के बिना पारंपरिक आयुर्वेदिक हड्डी और जोड़ उपचार।",
+        treatmentsTitle: "हमारे उपचार",
+        treatmentsSub: "(सर्जरी / किसी ऑपरेशन के बिना)",
+        t1: "हड्डी का फ्रैक्चर उपचार",
+        t2: "जोड़ दर्द उपचार",
+        t3: "सूजन और जकड़न",
+        t4: "जोड़ का विस्थापन",
+        t5: "फ्रोजन शोल्डर",
+        t6: "घुटने का जोड़ उपचार",
+        t7: "साइटिका दर्द",
+        t8: "पीठ, रीढ़ और गर्दन दर्द",
+        t9: "मांसपेशियों का दर्द",
+        t10: "खेलों की चोट का उपचार",
+        t11: "और अधिक…",
+        approachTitle: "हमारी आयुर्वेदिक पद्धति",
+        approachText: "हमारा उपचार पारंपरिक आयुर्वेदिक हडवैद्य प्रथाओं पर आधारित है, जो हड्डियों, जोड़ और मांसपेशियों का प्राकृतिक उपचार बिना सर्जरी के करता है। प्रत्येक रोगी का सावधानीपूर्वक परीक्षण किया जाता है।",
+        a1: "प्राकृतिक हड्डी संरेखण तकनीक",
+        a2: "पारंपरिक आयुर्वेदिक तेल और पट्टी",
+        a3: "व्यक्तिगत रोगी परीक्षण",
+        a4: "सर्जरी रहित सुरक्षित उपचार विधियां",
+        a5: "दीर्घकालिक स्वास्थ्य पर ध्यान",
+        aboutTitle: "हमारे बारे में",
+        aboutText: "हम कात्रज, पुणे में स्थित एक पारंपरिक आयुर्वेदिक हडवैद्य क्लिनिक हैं, जो बिना सर्जरी के हड्डी, जोड़, मांसपेशी और नसों के उपचार प्रदान करते हैं।",
+        contactTitle: "संपर्क और स्थान",
+        contactText: "अपॉइंटमेंट से पहले संपर्क करें",
+        locLink: "स्थान देखें",
+        waLink: "व्हाट्सएप"
+    },
+    MR: {
+        headerTitle: "वरखडे हडवैद्य – अजित वरखडे",
+        navbarTitle: "हडवैद्य अजित वरखडे",
+        navHome: "मुख्यपृष्ठ",
+        navTreatments: "उपचार",
+        navApproach: "पद्धतिः",
+        navAbout: "आमच्याबद्दल",
+        navContact: "संपर्क",
+        homeTitle: "वरखडे हडवैद्य मध्ये आपले स्वागत आहे, कात्रज",
+        homeText: "शस्त्रक्रिये शिवाय पारंपरिक आयुर्वेदिक हाड आणि सांध्य उपचार.",
+        treatmentsTitle: "आमचे उपचार",
+        treatmentsSub: "(शस्त्रक्रिया / कोणत्याही ऑपरेशन शिवाय)",
+        t1: "हाडाचे फ्रॅक्चर उपचार",
+        t2: "सांध्य दुखापत उपचार",
+        t3: "सुज आणि जडपणा",
+        t4: "सांध्य विस्थापन",
+        t5: "फ्रोजन खांदा",
+        t6: "घोट्याचे सांध्य उपचार",
+        t7: "सायटिका दुखापत",
+        t8: "पाठी, कंबरे आणि मानेचा दुखापत",
+        t9: "स्नायू दुखापत",
+        t10: "खेळांच्या दुखापतीचे उपचार",
+        t11: "आणखी…",
+        approachTitle: "आमचा आयुर्वेदिक दृष्टिकोन",
+        approachText: "आमचा उपचार पारंपरिक आयुर्वेदिक हडवैद्य पद्धतींवर आधारित आहे, हाडे, सांधे आणि स्नायूंचा नैसर्गिक उपचार शस्त्रक्रिये शिवाय करतो. प्रत्येक रुग्णाची काळजीपूर्वक तपासणी केली जाते.",
+        a1: "नैसर्गिक हाड संरेखन तंत्र",
+        a2: "पारंपरिक आयुर्वेदिक तेल आणि पट्ट्या",
+        a3: "वैयक्तिक रुग्ण तपासणी",
+        a4: "शस्त्रक्रिये शिवाय सुरक्षित उपचार पद्धती",
+        a5: "दीर्घकालीन पुनर्वसनावर लक्ष",
+        aboutTitle: "आमच्याबद्दल",
+        aboutText: "आम्ही कात्रज, पुणे येथे स्थित पारंपरिक आयुर्वेदिक हडवैद्य क्लिनिक आहोत, जे शस्त्रक्रिये शिवाय हाडे, सांधे, स्नायू आणि मज्जातंतू उपचार प्रदान करतो.",
+        contactTitle: "संपर्क आणि स्थान",
+        contactText: "अपॉइंटमेंटसाठी भेट देण्यापूर्वी संपर्क करा",
+        locLink: "स्थान पहा",
+        waLink: "व्हाट्सएप"
+    }
+};
+
+function changeLanguage(){
+    const lang = document.getElementById("langSelect").value;
+    const tr = translations[lang];
+    if(!tr) return;
+
+    document.getElementById("headerTitle").innerText = tr.headerTitle;
+    document.getElementById("navbarTitle").innerText = tr.navbarTitle;
+    document.getElementById("navHome").innerText = tr.navHome;
+    document.getElementById("navTreatments").innerText = tr.navTreatments;
+    document.getElementById("navApproach").innerText = tr.navApproach;
+    document.getElementById("navAbout").innerText = tr.navAbout;
+    document.getElementById("navContact").innerText = tr.navContact;
+
+    document.getElementById("homeTitle").innerText = tr.homeTitle;
+    document.getElementById("homeText").innerText = tr.homeText;
+
+    document.getElementById("treatmentsTitle").innerText = tr.treatmentsTitle;
+    document.getElementById("treatmentsSub").innerText = tr.treatmentsSub;
+    for(let i=1;i<=11;i++){
+        document.getElementById("t"+i).innerText = tr["t"+i];
+    }
+
+    document.getElementById("approachTitle").innerText = tr.approachTitle;
+    document.getElementById("approachText").innerText = tr.approachText;
+    for(let i=1;i<=5;i++){
+        document.getElementById("a"+i).innerText = tr["a"+i];
+    }
+
+    document.getElementById("aboutTitle").innerText = tr.aboutTitle;
+    document.getElementById("aboutText").innerText = tr.aboutText;
+
+    document.getElementById("contactTitle").innerText = tr.contactTitle;
+    document.getElementById("contactText").innerText = tr.contactText;
+    document.getElementById("locLink").innerText = tr.locLink;
+    document.getElementById("waLink").innerText = tr.waLink;
+}
+</script>
+
+</body> 
+</html>
