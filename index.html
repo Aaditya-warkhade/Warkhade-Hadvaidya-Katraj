@@ -176,9 +176,9 @@ footer{
         <div onclick="scrollToId('about')" id="navAbout">About</div>
         <div onclick="openContact()" id="navContact">Contact</div>
         <select id="langSelect" onchange="changeLanguage()">
-            <option value="EN">EN</option>
-            <option value="HI">HI</option>
-            <option value="MR">MR</option>
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Marathi">Marathi</option>
         </select>
     </div>
 </div>
@@ -277,7 +277,44 @@ function closeContact(){
 
 // LANGUAGE CONTENT
 const translations = {
-    HI: {
+      English: {
+        headerTitle: "Warkhade Hadvaidya – Ajit Warkhade",
+        navbarTitle: "Hadvaidya Ajit Warkhade",
+        navHome: "Home",
+        navTreatments: "Treatments",
+        navApproach: "Approach",
+        navAbout: "About",
+        navContact: "Contact",
+        homeTitle: "Welcome to Warkhade Hadvaidya, Katraj",
+        homeText: "Traditional Ayurvedic bone and joint healing without surgery.",
+        treatmentsTitle: "Our Treatments",
+        treatmentsSub: "(Without Surgery / Without Any Operation)",
+        t1: "Bone Fracture Treatment",
+        t2: "Joint Pain Treatment",
+        t3: "Swelling & Inflammation",
+        t4: "Joint Dislocation",
+        t5: "Frozen Shoulder",
+        t6: "Knee Joint Treatment",
+        t7: "Sciatica Pain",
+        t8: "Back, Spine & Neck Pain",
+        t9: "Muscle Pain",
+        t10: "Sports Injury Treatment",
+        t11: "And More…",
+        approachTitle: "Our Ayurvedic Approach",
+        approachText: "Our treatment approach is based on traditional Ayurvedic Hadvaidya practices, focusing on natural healing of bones, joints and muscles without surgery. Each patient is examined carefully to provide personalized and safe treatment.",
+        a1: "Natural Bone Alignment Techniques",
+        a2: "Traditional Ayurvedic Oils & Bandaging",
+        a3: "Personalized Patient Examination",
+        a4: "Non-Surgical & Safe Healing Methods",
+        a5: "Focus on Long-Term Recovery",
+        aboutTitle: "About Us",
+        aboutText: "We are a traditional Ayurvedic Hadvaidya clinic based in Katraj, Pune, providing trusted bone, joint, muscle and nerve treatments without surgery.",
+        contactTitle: "Contact & Location",
+        contactText: "Contact us before visiting for appointment",
+        locLink: "View Location",
+        waLink: "WhatsApp"
+    },
+    Hindi: {
         headerTitle: "वरखडे हडवैद्य – अजित वरखडे",
         navbarTitle: "हडवैद्य अजित वरखडे",
         navHome: "होम",
@@ -314,7 +351,7 @@ const translations = {
         locLink: "स्थान देखें",
         waLink: "व्हाट्सएप"
     },
-    MR: {
+    Marathi: {
         headerTitle: "वरखडे हडवैद्य – अजित वरखडे",
         navbarTitle: "हडवैद्य अजित वरखडे",
         navHome: "मुख्यपृष्ठ",
@@ -393,5 +430,6 @@ function changeLanguage(){
 
 </body> 
 </html>
+
 
 
